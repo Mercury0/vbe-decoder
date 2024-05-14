@@ -18,14 +18,6 @@ import os
 from colorama import Fore, Style
 import re
 
-parser = argparse.ArgumentParser(description=__description__)
-parser.add_argument('files', metavar='file', type=str, nargs='+',
-                    help='file to decode')
-parser.add_argument("-o", "--output", metavar='output', type=str, default=None,
-                    help='output file (default stdout)')
-args = parser.parse_args()
-
-
 def decode_data(data: str):
     # Magic number used for the VBE voodoo magic below
     decoding_offset = 9
@@ -116,6 +108,12 @@ def main():
     """
     Decode an encoded VBScript, often seen as a .vbe file
     """
+    parser = argparse.ArgumentParser(description=__description__)
+    parser.add_argument('files', metavar='file', type=str, nargs='+',
+                        help='file to decode')
+    parser.add_argument("-o", "--output", metavar='output', type=str, default=None,
+                        help='output file (default stdout)')
+    args = parser.parse_args()
 
     # Ensure we can work with these files, and then decode them
     validate_files(args.files)
@@ -133,5 +131,5 @@ def main():
             fatal_error(str(e))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
