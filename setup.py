@@ -9,7 +9,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'vbe-decoder=vbe_decoder:main',
+            'vbe-decoder=vbe_decoder.__main__:main',
         ],
     },
     description='Decode an encoded VBScript, often seen as a .vbe file',
