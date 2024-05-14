@@ -14,5 +14,6 @@ setup(
     },
     description='Decode an encoded VBScript, often seen as a .vbe file',
     author='John Hammond',
+    author_email='your-email@example.com',
     url='https://github.com/Mercury0/vbe-decoder',
 )
