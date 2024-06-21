@@ -7,7 +7,7 @@
 
 ```bash
 # using pipx (recommended)
-pipx install git+https://github.com/Mercury0/vbe-decoder.git
+pipx install git+https://github.com/Mercury0/vbe-decoder
 ```
 
 # Usage
